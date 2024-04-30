@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Superflat Generator JSON Configurator</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 <script src="script.js" defer></script>
-<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1>Superflat Generator JSON Configurator</h1>
@@ -30,10 +30,14 @@
     <select id="biome" style="width: 300px;">
         <option></option>
     </select><br><br>
-    <label for="lakes">Generate Lakes:</label>
-    <input type="checkbox" id="lakes"><br><br>
-    <label for="features">Generate Features:</label>
+    <div class="checkboxContainer">
+        <input type="checkbox" id="lakes">
+        <label for="lakes"> Generate Lakes</label>
+    </div>
+    <div class="checkboxContainer">
     <input type="checkbox" id="features"><br><br>
+    <label for="features"> Generate Features:</label>
+    </div>
     <button onclick="generateJSON()">Generate JSON</button>
     <div id="jsonResult"></div>
 </div>

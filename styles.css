@@ -23,6 +23,13 @@ label {
     margin-bottom: 5px;
 }
 
+/* Style for checkbox container */
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 /* Style for buttons */
 button {
     padding: 8px 16px;
@@ -44,12 +51,13 @@ button:hover {
 
 /* Style for Select2 dropdowns */
 .select2-container {
-    width: 100% !important;
+    width: 78% !important;
 }
 
 .select2-selection__rendered {
     overflow: visible !important;
 }
+
 
 h1{
     text-align: center;
