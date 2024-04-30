@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Superflat Generator JSON Configurator</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script src="script.js" defer></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Superflat Generator JSON Configurator</h1>
+<div id="generator">
+    <div id="layersContainer">
+        <label>Layers:</label>
+        <div id="layerInputs">
+            <div class="layerInput">
+                <input type="number" class="heightInput" placeholder="Height" min="0" max="4064">
+                <select class="blockInput" style="width: 200px;">
+                    <option></option>
+                </select>
+                <button class="removeLayerButton" onclick="removeLayer(this)">Remove</button>
+            </div>
+        </div>
+        <button onclick="addLayer()">Add Layer</button>
+    </div>
+    <label for="biome">Biome:</label>
+    <select id="biome" style="width: 300px;">
+        <option></option>
+    </select><br><br>
+    <label for="lakes">Generate Lakes:</label>
+    <input type="checkbox" id="lakes"><br><br>
+    <label for="features">Generate Features:</label>
+    <input type="checkbox" id="features"><br><br>
+    <button onclick="generateJSON()">Generate JSON</button>
+    <div id="jsonResult"></div>
+</div>
+</body>
+</html>
